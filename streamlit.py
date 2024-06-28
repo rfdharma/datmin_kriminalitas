@@ -387,13 +387,13 @@ def input_predict():
 st.sidebar.title("Navigation")
 selected_page = st.sidebar.radio(
     "Go to",
-    # ("Home", "Exploratory Data Analysis", "Hypothesis Testing", "Input Predict","Information Best Model")
-    ("Exploratory Data Analysis", "Hypothesis Testing", "Input Predict","Information Best Model")
+    ("Home", "Exploratory Data Analysis", "Hypothesis Testing", "Input Predict","Information Best Model")
+    # ("Exploratory Data Analysis", "Hypothesis Testing", "Input Predict","Information Best Model")
 )
 
-# if selected_page == "Home":
-#     home()
-if selected_page == "Exploratory Data Analysis":
+if selected_page == "Home":
+    home()
+elif selected_page == "Exploratory Data Analysis":
     eda()
 elif selected_page == "Hypothesis Testing":
     hipo_testing()
