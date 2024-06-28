@@ -338,7 +338,7 @@ def input_predict():
     st.write('---')
     
     # Pilihan untuk 'daerah' menggunakan inversi transformasi
-    daerah = st.selectbox('Daerah', df['daerah'].unique())
+    daerah = st.selectbox('Daerah', df['daerah'].unique(),index=36)
     
     tahun = st.selectbox('Tahun', df['tahun'].unique())
     indeks_pembangunan_manusia = st.number_input('Indeks Pembangunan Manusia', value=65)
@@ -363,7 +363,7 @@ def input_predict():
         
         # Melakukan prediksi dengan model yang sudah di-fit
         prediction = model_fe.predict(df_new)
-        return prediction.iloc[0]  # Return the predicted value
+        return abs(prediction.iloc[0])  # Return the predicted value
     
     if st.button('Predict'):
         prediction_result = predict(daerah, tahun, indeks_pembangunan_manusia, tingkat_pengangguran_terbuka, jumlah_tindak_pidana, jumlah_penduduk_miskin)
