@@ -71,14 +71,15 @@ def eda():
     with col1:
         with st.expander("🔍 See explanation"):
             st.write("""
-            Wordcloud yang muncul dari media Suara Surabaya menggambarkan fokus pemberitaan yang dominan pada peristiwa kriminalitas di Surabaya. Kata-kata seperti Polrestabes Surabaya, kejadian, laporan, pelapor, korban, tersangka, dan operasi Sikat menonjol sebagai representasi utama dalam berita mereka. Hal ini menunjukkan bahwa media Suara Surabaya secara konsisten memberitakan berbagai kejadian kriminal serta respons kepolisian dan masyarakat terhadapnya di kota Surabaya.
-                """)
+            Wordcloud muncul dari media Suara Surabaya, menggambarkan fokus pemberitaan dominan pada peristiwa kriminalitas. Kata-kata seperti Polrestabes Surabaya, kejadian, laporan, pelapor, korban, tersangka, dan operasi Sikat menonjol sebagai representasi utama berita mereka.
+            """)
     
     with col2:
         with st.expander("❓ Why do we use this?"):
             st.write("""
-Kami menggunakan wordcloud seperti ini untuk secara visual mewakili frekuensi kata-kata dalam sebuah teks atau kumpulan teks. Hal ini membantu kami dengan cepat memahami tema atau topik yang paling dominan dalam konten tersebut, sehingga lebih mudah mengidentifikasi pola, tren, atau area fokus utama yang diminati.
-""")
+            Wordcloud digunakan untuk secara visual memperlihatkan frekuensi kata-kata dalam teks atau kumpulan teks. Hal ini membantu mengidentifikasi tema dominan dalam konten dan mendapatkan wawasan cepat tentang isu-isu yang paling sering muncul dalam berita.
+            """)
+
     import plotly.express as px
 
     topics = ['Surabaya Student Bootcamp 2024', 'Surabaya Vehicle Theft Arrests', 
@@ -111,14 +112,14 @@ Kami menggunakan wordcloud seperti ini untuk secara visual mewakili frekuensi ka
     with col1:
         with st.expander("🔍 See explanation"):
             st.write("""
-            Kami melakukan riset pada SuaraSurabaya (media Berita kota Surabaya) dengan mengambil data secara acak didapatkan sebanyak 300 data. Dari 300 data tersebut dilakukan topic modeling sehingga menghasilkan topik pada visualisasi bar plot di atas. Ditemukan bahwa topik yang paling sering muncul adalah topik mengenai Penangkapan Pencurian Kendaraan Bermotor di Surabaya berdasarkan 300 berita tersebut. 
-                """)
+            Riset pada SuaraSurabaya dengan 300 data yang diambil acak dilakukan untuk topic modeling, menghasilkan visualisasi bar plot topik. Ditemukan topik paling sering adalah Penangkapan Pencurian Kendaraan Bermotor di Surabaya berdasarkan 300 berita tersebut.
+            """)
     
     with col2:
         with st.expander("❓ Why do we use this?"):
             st.write("""
-Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karena dapat membantu mengidentifikasi dan memahami topik atau isu yang paling sering muncul dalam berita mereka. Hal ini berguna untuk menyoroti tren berita yang relevan dan penting, seperti penangkapan pencurian kendaraan bermotor di Surabaya, yang memberikan wawasan yang berharga bagi kepentingan riset dan pemahaman mendalam terhadap peristiwa-peristiwa kriminalitas yang terjadi di kota tersebut.
-""")
+            Topic modeling digunakan untuk menganalisis dan memahami topik atau isu yang dominan dalam berita SuaraSurabaya. Berguna untuk mengidentifikasi tren berita yang signifikan dan memberikan wawasan mendalam terhadap peristiwa-peristiwa penting dalam konteks kriminalitas di Surabaya.
+            """)
 
     st.write('---')
     st.header("Data Predictive")
@@ -128,23 +129,16 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
     with st.expander("💡 Variables explanation"):
         st.write("""
         1. daerah: Nama daerah atau kabupaten/kota di Jawa Timur.
+        2. tahun: Tahun pengukuran data.
+        3. indeks_pembangunan_manusia: Indeks yang mengukur tingkat pembangunan manusia di suatu daerah, mencakup pendidikan, kesehatan, dan pendapatan.
+        4. tingkat_pengangguran_terbuka: Persentase dari angkatan kerja yang tidak memiliki pekerjaan tetapi aktif mencari pekerjaan.
+        5. jumlah_tindak_pidana: Jumlah kejahatan yang dilaporkan dalam suatu daerah.
+        6. jumlah_penyelasaian: Jumlah kasus kejahatan yang berhasil diselesaikan atau ditindaklanjuti.
+        7. jumlah_penduduk_miskin: Estimasi jumlah penduduk miskin dalam ribuan jiwa.
+        8. tingkat_pendidikan: Persentase penduduk yang telah menyelesaikan pendidikan formal tertentu, seperti tingkat SD, SMP, SMA, atau perguruan tinggi.
+        9. selang_waktu: Indeks atau angka tambahan yang mungkin menggambarkan periode tertentu atau rentang waktu yang diukur dalam satuan tertentu.
+        """)
 
-2. tahun: Tahun pengukuran data.
-
-3. indeks_pembangunan_manusia: Indeks yang mengukur tingkat pembangunan manusia di suatu daerah, mencakup pendidikan, kesehatan, dan pendapatan.
-
-4. tingkat_pengangguran_terbuka: Persentase dari angkatan kerja yang tidak memiliki pekerjaan tetapi aktif mencari pekerjaan.
-5. jumlah_tindak_pidana: Jumlah kejahatan yang dilaporkan dalam suatu daerah.
-                 
-6. jumlah_penyelasaian: Jumlah kasus kejahatan yang berhasil diselesaikan atau ditindaklanjuti.
-
-7. jumlah_penduduk_miskin: Estimasi jumlah penduduk miskin dalam ribuan jiwa.
-
-8. tingkat_pendidikan: Persentase penduduk yang telah menyelesaikan pendidikan formal tertentu, seperti tingkat SD, SMP, SMA, atau perguruan tinggi.
-                 
-9. selang_waktu: Indeks atau angka tambahan yang mungkin menggambarkan periode tertentu atau rentang waktu yang diukur dalam satuan tertentu
-            """)
-        
     ##### DESC STATS #####
     st.text("")
     st.markdown(
@@ -157,17 +151,16 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
     with col1:
         with st.expander("🔍 See explanation"):
             st.write("""
-            Rata-rata indeks pembangunan manusia sebesar 70.37 menunjukkan tingkat pembangunan yang relatif tinggi, dengan tingkat pengangguran terbuka rata-rata 3.71% menunjukkan stabilitas pasar tenaga kerja yang cukup baik. Jumlah tindak pidana memiliki nilai rata-rata 931, menunjukkan adanya tantangan keamanan, meskipun jumlah penyelesaian yang rata-rata lebih rendah (701.75) menunjukkan upaya penegakan hukum yang kurang efektif. Jumlah penduduk miskin memiliki nilai rata-rata 119.76, yang menunjukkan masalah signifikan dalam kesenjangan ekonomi. Tingkat pendidikan rata-rata 0.62 menunjukkan akses yang cukup baik ke pendidikan dasar, sementara selang waktu rata-rata 655.23 mencerminkan periode waktu tertentu yang diukur dalam dataset ini.
+            Rata-rata indeks pembangunan manusia 70.37 menunjukkan pembangunan yang relatif tinggi. Tingkat pengangguran terbuka rata-rata 3.71% menunjukkan stabilitas pasar tenaga kerja yang baik. Jumlah tindak pidana rata-rata 931, menunjukkan tantangan keamanan, dengan jumlah penyelesaian yang lebih rendah (701.75) menunjukkan kurangnya efektivitas penegakan hukum. Jumlah penduduk miskin rata-rata 119.76 menunjukkan masalah signifikan dalam kesenjangan ekonomi. Tingkat pendidikan rata-rata 0.62 menunjukkan akses yang cukup baik ke pendidikan dasar, sementara selang waktu rata-rata 655.23 mencerminkan periode waktu tertentu dalam dataset.
             """)
     
     with col2:
         with st.expander("❓ Why do we use this?"):
             st.write("""
-            * Statistika deskriptif diperlukan untuk dataset ini agar kita dapat memahami dan menggambarkan secara ringkas karakteristik-karakteristik utama dari data kesehatan pegawai yang disurvei. 
-            * Informasi ini berguna untuk memberikan pemahaman awal tentang profil kesehatan populasi pegawai tersebut, yang dapat menjadi dasar untuk analisis lebih lanjut,seperti pengambilan keputusan ataupun pemodelan.
-                """)
-            
-##### DISTRIBUTIONS #####
+            Statistika deskriptif digunakan untuk memberikan gambaran umum tentang karakteristik utama dari dataset. Informasi ini membantu dalam memahami profil data secara lebih dalam, sebagai dasar untuk analisis lebih lanjut dan pengambilan keputusan yang lebih baik.
+            """)
+
+    ##### DISTRIBUTIONS #####
 
     st.markdown(
         "<br>"
@@ -175,8 +168,7 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
         unsafe_allow_html=True
     )
 
-
-    numerical_columns = [col for col in df.columns if df[col].dtype in ['int64', 'float64'] 
+    numerical_columns = [col for col in see.columns if see[col].dtype in ['int64', 'float64'] 
                                 and col not in ['daerah', 'tahun']]
 
     num_plots = len(numerical_columns)
@@ -194,11 +186,7 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
                 with cols[j]:
                     col = numerical_columns[idx]
                     st.write(col)
-                    # Adjust the plotting parameters
-                    if col == "Usia":  # Adjust parameters for 'Usia' plot
-                        sns.histplot(data=see, x=col, kde=True, color=colors[idx])
-                    else:  # For other plots
-                        sns.histplot(data=see, x=col, kde=True, color=colors[idx])
+                    sns.histplot(data=see, x=col, kde=True, color=colors[idx])
                     plt.xlabel('')
                     st.pyplot()
 
@@ -206,17 +194,15 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
     with col1:
         with st.expander("🔍 See explanation"):
             st.write("""
-            Distribusi data secara visual tidak ada yang normal, bahkan untuk variabel dependen yaitu "selang waktu" sekalipun.
-                """)
+            Distribusi data secara visual tidak menunjukkan distribusi normal, termasuk variabel dependen 'selang waktu'.
+            """)
     
     with col2:
         with st.expander("❓ Why do we use this?"):
             st.write("""
-            * Distribusi data ini penting karena memberikan informasi tentang pola-pola umum, termasuk apakah data cenderung terkumpul di sekitar nilai-nilai tertentu atau apakah ada outlier yang signifikan. 
-            * Informasi ini membantu kita dalam mengidentifikasi tren, anomali, dan karakteristik khusus dari populasi yang disurvei. 
-            * Dengan pemahaman yang lebih baik tentang distribusi variabel, kita dapat membuat keputusan yang lebih tepat dan merancang strategi intervensi yang lebih efektif dalam selang waktu terjadinya tindak pidana.
-                """)
-    
+            Distribusi data memberikan wawasan tentang pola umum, anomali, dan karakteristik khusus dari populasi yang disurvei. Informasi ini penting untuk mengidentifikasi tren dan area yang memerlukan perhatian lebih lanjut atau intervensi dalam konteks tindak pidana.
+            """)
+
     top_5_manusia = see[see['tahun'] == 2018].nlargest(5, 'indeks_pembangunan_manusia')['daerah'].tolist()
     top_5_pengangguran = see[see['tahun'] == 2018].nlargest(5, 'tingkat_pengangguran_terbuka')['daerah'].tolist()
     top_5_tindak_pidana = see[see['tahun'] == 2018].nlargest(5, 'jumlah_tindak_pidana')['daerah'].tolist()
@@ -250,13 +236,14 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
 
     fig.update_layout(height=1500, width=800, title_text='Trend Line Data Berdasarkan Top 5 Daerah', xaxis_title='Tahun')
     st.plotly_chart(fig)
+
     # Data aggregation and plotting for multiple years
 
     years = ['2016', '2017', '2018']
     df_all_years = []
 
     for year in years:
-        df_year = data.groupby('Kepolisian/Resort').agg(total_jumlah=pd.NamedAgg(column=f'{year}_jumlah', aggfunc='sum'),
+        df_year = see.groupby('Kepolisian/Resort').agg(total_jumlah=pd.NamedAgg(column=f'{year}_jumlah', aggfunc='sum'),
                                                         total_penyelesaian=pd.NamedAgg(column=f'{year}_penyelesaian', aggfunc='sum'))
         df_year['Year'] = year
         df_all_years.append(df_year)
@@ -280,6 +267,7 @@ Kami menggunakan topic modeling untuk menganalisis data dari SuaraSurabaya karen
                             barmode='group',
                             title='Penyelesaian Kasus di Kepolisian/Resort (2016-2018)')
     st.plotly_chart(fig_penyelesaian)
+
             
 
 
