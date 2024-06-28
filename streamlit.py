@@ -243,7 +243,7 @@ def eda():
     df_all_years = []
 
     for year in years:
-        df_year = see.groupby('Kepolisian/Resort').agg(total_jumlah=pd.NamedAgg(column=f'{year}_jumlah', aggfunc='sum'),
+        df_year = data.groupby('Kepolisian/Resort').agg(total_jumlah=pd.NamedAgg(column=f'{year}_jumlah', aggfunc='sum'),
                                                         total_penyelesaian=pd.NamedAgg(column=f'{year}_penyelesaian', aggfunc='sum'))
         df_year['Year'] = year
         df_all_years.append(df_year)
